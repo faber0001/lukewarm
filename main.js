@@ -5,7 +5,7 @@ var c10 = 0, c11 = 0, c12 = 0, c13 = 0, c14 = 0, c15 = 0, c16 = 0, c17 = 0, c18 
 var c20 = 0, c21 = 0, c22 = 0, c23 = 0, c24 = 0, c25 = 0, c26 = 0, c27 = 0, c28 = 0, c29 = 0;
 var c30 = 0, c31 = 0, c32 = 0, c33 = 0, c34 = 0, c35 = 0, c36 = 0, c37 = 0;
 // Agrega más contadores según sea necesario...
-
+var general=0;
 // Función principal
 function procesarDatos() {
     var datos = obtenerDatos();
@@ -59,6 +59,7 @@ function obtenerDatoValidado() {
 
 // Función para procesar el contador y mostrarlo en el DOM
 function procesarContador() {
+    general++;
     switch (x) {
         case 0:
             c0++;
@@ -225,7 +226,7 @@ function mostrarMensaje(mensaje) {
 function mostrarContador(id, contador) {
     if (contador > 2) {
         var elemento = document.getElementById(id);
-        elemento.innerHTML = id + " - " + contador;
+        elemento.innerHTML = id + " - " + general;
         if (contador >= 4) {
             elemento.style.color = "black"; // Cambiar a color negro, por ejemplo
         }
